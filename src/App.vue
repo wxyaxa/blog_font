@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  created(){
+    this.$store.axios=this.axios
+  }
 }
 </script>
 
@@ -16,13 +19,8 @@ export default {
   margin:0;
   list-style:none;
 }
-body,html{
+body,html,#app{
   width:100%;
   height:100%;
 }
-#app{
-  width:100%;
-  height:100%;
-}
-
 </style>

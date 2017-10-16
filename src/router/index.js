@@ -1,35 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import home from '@/components/home'
-import me from '@/components/me'
-import life from '@/components/life'
+import index from '@/components/index'
+import loading from '@/components/loading'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello,
-      redirect:'/home',
-      children:[
-        {
-          path:'home',
-          name:'home',
-          component:home
-        },
-        {
-          path:'me',
-          name:'me',
-          component:me
-        },
-        {
-          path:'life',
-          name:'life',
-          component:life
-        }
-      ]
+      name: 'index',
+      component: index,
+    },
+    {
+      path: '/loading',
+      name: 'loading',
+      component: loading
     }
   ]
 })
